@@ -66,14 +66,14 @@ def connect():
 
         ca = 'Підключенно пристрій з адресою ' + str(address[0]) +" "+ str(address[1])
 
-        Label(window, text = ca, font = ("Arial", 11), bg = "#EBDCB2", anchor = NW).place(x=20, y = 120)
+        Label(window, text = ca, font = ("Arial", 11), bg = "#FFBCD1", anchor = NW).place(x=20, y = 120)
                 
                 
         data = None
         data_array = []
 
         print('Отримання даних...')
-        Label(window, text = 'Отримання даних...', font = ("Arial", 11), bg = "#EBDCB2", anchor = NW).place(x=20, y = 140)
+        Label(window, text = 'Отримання даних...', font = ("Arial", 11), bg = "#FFBCD1", anchor = NW).place(x=20, y = 140)
                 
         while True:
                 data = connection.recv(1024)
@@ -83,7 +83,7 @@ def connect():
 
                 print('Обробка...')
 
-                Label(window, text = 'Обробка...', font = ("Arial", 11), bg = "#EBDCB2", anchor = NW).place(x=20, y = 160)
+                Label(window, text = 'Обробка...', font = ("Arial", 11), bg = "#FFBCD1", anchor = NW).place(x=20, y = 160)
                         
 
                 # [0: x, 1: c, 2: y]
@@ -98,13 +98,13 @@ def connect():
                         
                 z1='Надсилання даних до клієнта ' + str(address[0]) +" "+ str(address[1])
 
-                Label(window, text = z1, font = ("Arial", 11), bg = "#EBDCB2", anchor = NW).place(x=20, y = 180)
+                Label(window, text = z1, font = ("Arial", 11), bg = "#FFBCD1", anchor = NW).place(x=20, y = 180)
 
                 connection.send(bytearray(str(summ), 'utf-8'))
                 
         connection.close()
         
-        Label(window, text = "Підключення завершено.", font = ("Arial", 11), bg = "#EBDCB2", anchor = NW).place(x=20, y = 200)
+        Label(window, text = "Підключення завершено.", font = ("Arial", 11), bg = "#FFBCD1", anchor = NW).place(x=20, y = 200)
 
         
 
